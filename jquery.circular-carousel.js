@@ -103,7 +103,7 @@ Thanks: Addy Osmani, Marcus Haslam
 
       // Run the layering hack (see method below)
       layerHack(activeItem);
-    }
+    };
 
     /*
       Cycles through items 1 by 1, doing a redraw of positions each time.
@@ -115,7 +115,7 @@ Thanks: Addy Osmani, Marcus Haslam
 
       var i = 0;
 
-      if (direction == 1) {
+      if (direction === 1) {
 
         while (i < steps) {
 
@@ -154,7 +154,7 @@ Thanks: Addy Osmani, Marcus Haslam
 
       }
 
-    }
+    };
 
     /*
       Often we want to enumerate the activeItem. This utility ensures it doesn't go over the bounds when we're doing so.
@@ -165,7 +165,7 @@ Thanks: Addy Osmani, Marcus Haslam
       } else if (activeItem >= cycleMax) {
         activeItem = 0;
       }
-    }
+    };
 
 
     /*
@@ -207,7 +207,7 @@ Thanks: Addy Osmani, Marcus Haslam
       // Strongest z-index on the active item.
       $items.eq(activeItem).css('z-index', cycleMax + 1);
 
-    }
+    };
 
 
     /*
@@ -240,7 +240,7 @@ Thanks: Addy Osmani, Marcus Haslam
       }
      
       return (left > right) ? { 'direction' : 1, 'steps' : right } : { 'direction' : 0, 'steps' : left };
-    }
+    };
 
     /*
       Position items for first time
@@ -325,12 +325,10 @@ Thanks: Addy Osmani, Marcus Haslam
       on: function(e, fn) {
         $ele.on(e, fn);
       }
-    }
+    };
 
     return methods;
-  }
 
-
-  
+  };
 
 }(jQuery));
