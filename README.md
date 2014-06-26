@@ -1,0 +1,88 @@
+# jQuery Circular Carousel
+
+A library that creates dyanmic circular carousels. **Requires jQuery**. Adjustable dimensions, angle, durations, offsets. By default, scales non-active items to 0.5.
+
+# Browser Support 
+
+Uses CSS3 Transitions, CSS3 Transforms. Currently no polyfills or fallbacks implemented.
+
+- IE10+
+- Chrome
+- FF
+- Safari
+
+# Usage
+
+Use an unordered list like so, with at least 4 items (you can choose the class names and put whatever you want inside the items):
+
+	<ul class="carousel">
+		<li class="item active"></li>
+		<li class="item"></li>
+		<li class="item"></li>
+		<li class="item"></li>
+		<li class="item"></li>
+		<li class="item"></li>
+	</ul>
+
+Include jQuery, then download & include the library.
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.circular-carousel.js"></script>
+
+Include (or integrate) the library styles.
+
+	<link rel="stylesheet" href="css/jquery.circular-carousel.css">
+
+Then, in your application.
+
+	var options = {
+		ovalWidth: 400,
+		ovalHeight: 50,
+		offsetX: 100,
+		offsetY: 325,
+		angle: 0,
+		activeItem: 0,
+		duration: 350,
+		className: 'item'
+	}
+	var carousel = new CircularCarousel( options );
+
+Methods:
+
+	carousel.cycleActive('previous');
+	carousel.cycleActive('next');
+	carousel.cycleActiveTo(index);
+
+Events:
+	
+	/* Fires when an item is about to start it's activate animation */
+	carousel.on('itemBeforeActive', function(e, item) {
+		//do something with $(item)
+	});
+
+	/* Fires after an item finishes it's activate animation */
+	carousel.on('itemActive', function(e, item) {
+		//do something with $(item)
+	});
+
+	/* Fires when an active item starts it's de-activate animation */
+	carousel.on('itemBeforeDeactivate', function(e, item) {
+		//do something with $(item)
+	})
+
+	/* Fires after an active item has finished it's de-activate animation */
+	carousel.on('itemAfterDeactivate', function(e, item) {
+		//do something with $(item)
+	})
+
+
+See the [demo](/demo/).
+
+# License
+
+MIT
+
+# Thanks
+
+Addy Osmani for creating a useful method for mapping DOM elements to a shape.
+Marcus Haslam (@marcusehaslam) for helping to create the findBestRoute utility.
