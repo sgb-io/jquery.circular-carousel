@@ -2,6 +2,8 @@
 
 A library that creates dyanmic circular carousels. **Requires jQuery**. Adjustable dimensions, angle, durations, offsets. By default, scales non-active items to 0.5.
 
+![What it looks like.](/demo/screenshot.png)
+
 # Browser Support 
 
 Uses CSS3 Transitions, CSS3 Transforms. Currently no polyfills or fallbacks implemented.
@@ -15,6 +17,7 @@ Uses CSS3 Transitions, CSS3 Transforms. Currently no polyfills or fallbacks impl
 
 Use an unordered list like so, with at least 4 items (you can choose the class names and put whatever you want inside the items):
 
+	```html
 	<ul class="carousel">
 		<li class="item active"></li>
 		<li class="item"></li>
@@ -23,18 +26,24 @@ Use an unordered list like so, with at least 4 items (you can choose the class n
 		<li class="item"></li>
 		<li class="item"></li>
 	</ul>
+	```
 
 Include jQuery, then download & include the library.
-
+	
+	```html
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/jquery.circular-carousel.js"></script>
+    ```
 
 Include (or integrate) the library styles.
-
+	
+	```html
 	<link rel="stylesheet" href="css/jquery.circular-carousel.css">
+	```
 
 Then, in your application.
-
+	
+	```javascript
 	var options = {
 		ovalWidth: 400,
 		ovalHeight: 50,
@@ -46,15 +55,19 @@ Then, in your application.
 		className: 'item'
 	}
 	var carousel = new CircularCarousel( options );
+	```
 
 Methods:
-
+	
+	```javascript
 	carousel.cycleActive('previous');
 	carousel.cycleActive('next');
 	carousel.cycleActiveTo(index);
+	```
 
 Events:
 	
+	```javascript
 	/* Fires when an item is about to start it's activate animation */
 	carousel.on('itemBeforeActive', function(e, item) {
 		//do something with $(item)
@@ -74,6 +87,7 @@ Events:
 	carousel.on('itemAfterDeactivate', function(e, item) {
 		//do something with $(item)
 	})
+	```
 
 
 See the [demo](/demo/).
