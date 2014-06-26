@@ -1,6 +1,6 @@
 # jQuery Circular Carousel
 
-A library that creates dyanmic circular carousels. **Requires jQuery**. Adjustable dimensions, angle, durations, offsets. By default, scales non-active items to 0.5.
+A library that creates dyanmic circular carousels. **Requires jQuery**. Adjustable dimensions, angle, durations, offsets. By default, scales non-active items to 0.5. See the [demo](http://samuelgbrown.github.io/jquery.circular-carousel/demo/).
 
 ![What it looks like.](/demo/screenshot.png)
 
@@ -88,9 +88,6 @@ carousel.on('itemAfterDeactivate', function(e, item) {
 	//do something with $(item)
 })
 ```
-
-
-See the [demo](/demo/).
 
 # License
 
