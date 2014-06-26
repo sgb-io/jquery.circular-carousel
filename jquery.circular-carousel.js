@@ -43,10 +43,10 @@ Thanks: Addy Osmani, Marcus Haslam
           n = 0,
           beta = -angle * (Math.PI / 180),    
           sinbeta = Math.sin(beta),
-          cosbeta = Math.cos(beta);
+          cosbeta = Math.cos(beta),
+          offsetElement = activeItem,
+          offsetNextElement = activeItem + 1;
 
-      var offsetElement = activeItem;
-      var offsetNextElement = activeItem + 1;
       itemHeights = [];
 
       $items.eq(activeItem).addClass('active');
@@ -228,15 +228,15 @@ Thanks: Addy Osmani, Marcus Haslam
       var left = 0, right = 0;
 
       var index = start;
-      while(index != end){
+      while(index !== end){
         right++;
-        index = (index == array.length-1) ? 0 : index + 1;
+        index = (index === array.length-1) ? 0 : index + 1;
       }
      
       index = start;
-      while(index != end){
+      while(index !== end){
         left++;
-        index = (index == 0) ? array.length-1 : index - 1;
+        index = (index === 0) ? array.length-1 : index - 1;
       }
      
       return (left > right) ? { 'direction' : 1, 'steps' : right } : { 'direction' : 0, 'steps' : left };
