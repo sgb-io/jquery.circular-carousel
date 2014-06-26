@@ -6,7 +6,7 @@ A library that creates dynamic circular carousels. **Requires jQuery**. Adjustab
 
 # Browser Support 
 
-Uses CSS3 Transitions, CSS3 Transforms. Currently no polyfills or fallbacks implemented.
+Uses CSS3 Transitions, CSS3 Transforms. Currently no polyfills or fallbacks implemented for IE9.
 
 - IE10+
 - Chrome
