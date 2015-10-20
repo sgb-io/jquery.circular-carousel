@@ -4,6 +4,10 @@ A library that creates dynamic circular carousels. **Requires jQuery**. Adjustab
 
 ![What it looks like.](https://raw.githubusercontent.com/sgb-io/jquery.circular-carousel/master/demo/screenshot.png)
 
+# Status of this project
+
+This project is no longer in active development or supported, but please feel free to use it however you wish. Patches welcome.
+
 # Browser Support 
 
 Uses CSS3 Transitions, CSS3 Transforms. Currently no polyfills or fallbacks implemented for IE9.
